@@ -62,15 +62,15 @@ class IaCGenerator:
         return "# Unknown provider"
 
     def _generate_resource_block(self, spec: WorkloadSpec, offer) -> str:
-        if offer.provider == "aws":
+               if offer.provider == "aws":
             return (
                 'resource "aws_instance" "migrated" {\n'
-                f'  ami           = "ami-12345678" # Replace with valid AMI\n'
+                '  ami           = "ami-12345678" # Replace with valid AMI\n'
                 f'  instance_type = "{offer.instance_type}"\n'
-                f'  tags = {{\n'
+                '  tags = {\n'
                 f'    Name = "{spec.workload_name}"\n'
-                f'    ManagedBy = "cloud-arbitrage"\n'
-                f'  }}\n'
+                '    ManagedBy = "cloud-arbitrage"\n'
+                '  }\n'
                 '}\n'
             )
         elif offer.provider == "gcp":
