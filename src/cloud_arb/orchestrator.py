@@ -36,7 +36,7 @@ class Orchestrator:
             print("[ORCHESTRATOR] No migration action required.")
             return 0
 
-        print(f"[PRICING]      ✅ Arbitrage opportunity found!")
+        print("[PRICING]      ✅ Arbitrage opportunity found!")
         print(f"[PRICING]      Target: {result.best_offer.provider}/{result.best_offer.region} ({result.best_offer.instance_type})")
         print(f"[PRICING]      Target cost: ${result.best_offer.price_per_hour:.3f}/hr")
         print(f"[PRICING]      Savings: ${result.savings_per_hour:.3f}/hr ({result.savings_percent:.1%})")
