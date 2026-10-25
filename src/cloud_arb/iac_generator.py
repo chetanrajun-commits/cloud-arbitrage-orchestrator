@@ -24,7 +24,6 @@ class IaCGenerator:
         filename = f"{spec.workload_name}-migration.tf"
         filepath = self.output_dir / filename
 
-        # Generate provider-specific Terraform block based on the target cloud
         provider_block = self._generate_provider_block(offer.provider)
         resource_block = self._generate_resource_block(spec, offer)
 
@@ -62,7 +61,7 @@ class IaCGenerator:
         return "# Unknown provider"
 
     def _generate_resource_block(self, spec: WorkloadSpec, offer) -> str:
-               if offer.provider == "aws":
+        if offer.provider == "aws":
             return (
                 'resource "aws_instance" "migrated" {\n'
                 '  ami           = "ami-12345678" # Replace with valid AMI\n'
