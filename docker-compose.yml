@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  cloud-arb:
+    build: .
+    image: cloud-arbitrage-orchestrator:dev
+    command: ["run", "--config", "examples/arbitrage-config.yaml", "--workdir", "/tmp/out"]
+    volumes:
+      - ./out:/tmp/out
