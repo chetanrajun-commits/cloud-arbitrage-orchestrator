@@ -1,0 +1,14 @@
+{
+  "aws": {
+    "us-east-1": { "m6i.xlarge": 0.192 },
+    "us-west-2": { "m6i.xlarge": 0.192 }
+  },
+  "gcp": {
+    "us-central1": { "n2-standard-4": 0.190 },
+    "us-east4": { "n2-standard-4": 0.180 }
+  },
+  "azure": {
+    "eastus": { "Standard_D4s_v5": 0.150 },
+    "westus": { "Standard_D4s_v5": 0.140 }
+  }
+}
