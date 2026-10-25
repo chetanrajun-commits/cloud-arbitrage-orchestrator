@@ -1,0 +1,6 @@
+workload_name: portfolio-api
+current_cloud: aws
+current_region: us-east-1
+instance_type: m6i.xlarge
+min_savings_threshold: 0.20  # Only migrate if we save 20% or more
+max_price_per_hour: 0.25     # Hard ceiling: never migrate to a node more expensive than this
