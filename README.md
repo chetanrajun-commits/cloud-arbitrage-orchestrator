@@ -5,7 +5,7 @@
 [![CI](https://github.com/chetanrajun-commits/cloud-arbitrage-orchestrator/actions/workflows/ci.yml/badge.svg)](https://github.com/chetanrajun-commits/cloud-arbitrage-orchestrator/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-
+[![Ruff](https://img.shields.io/badge/lint-ruff-orange.svg)](https://github.com/astral-sh/ruff)
 ---
 
 ## The Problem
@@ -19,7 +19,7 @@ This repository is a **reference implementation** of the fix: an automated engin
 ## What it does
 
 1. **Ingests** a workload spec (current cloud, region, instance type) and financial thresholds (minimum savings %, maximum acceptable price).
-2. **Analyzes** a simulated multi-cloud pricing catalogue to find the absolute cheapest spot instance globally.
+2. **Analyses** a simulated multi-cloud pricing catalogue to find the absolute cheapest spot instance globally.
 3. **Validates** the target against hard FinOps ceilings to prevent migrating to a region that is marginally cheaper but operationally risky.
 4. **Generates** provider-specific Terraform (`.tf`) files ready for a PR.
 
